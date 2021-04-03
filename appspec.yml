@@ -15,7 +15,7 @@ Resources:
       Properties:
         TaskDefinition: "arn:aws:iam::880690944161:role/CodeDeployerTina:1" # Specify the ARN of your task definition (arn:aws:ecs:region:account-id:task-definition/task-definition-family-name:task-definition-revision-number)
         LoadBalancerInfo:
-          ContainerName: "whos_speaking_speaker_backend_github" # Specify the name of your Amazon ECS application's container
+          ContainerName: "my_voice_meeting" # Specify the name of your Amazon ECS application's container
           ContainerPort: "80" # Specify the port for your container where traffic reroutes
 # Optional properties
         PlatformVersion: "LATEST" # Specify the version of your Amazon ECS Service
