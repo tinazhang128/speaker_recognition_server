@@ -6,7 +6,7 @@ phases:
       - echo Logging in to Amazon ECR...
       - $(aws ecr get-login --region $AWS_DEFAULT_REGION --no-include-email)
       - IMAGE_REPO_NAME=medibooking
-      - REPOSITORY_URI=500182777606.dkr.ecr.ap-southeast-2.amazonaws.com/medibooking-mirco-services
+      - REPOSITORY_URI=880690944161.dkr.ecr.us-east-1.amazonaws.com/voicemeeting_base
       - COMMIT_HASH=$(echo $CODEBUILD_RES////////////OLVED_SOURCE_VERSION | cut -c 1-7)
       - IMAGE_TAG=${COMMIT_HASH:=latest}
   build:
