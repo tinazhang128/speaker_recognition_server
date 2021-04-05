@@ -5,7 +5,7 @@ phases:
   pre_build:
     commands:
       - echo Logging in to Amazon ECR...
-      - $(aws ecr get-login --region $AWS_DEFAULT_REGION --no-include-email)
+      - $(aws ecr get-login --region "${aws_region}" --no-include-email)
       - IMAGE_REPO_NAME=medibooking
       - REPOSITORY_URI=880690944161.dkr.ecr.ap-southeast-2.amazonaws.com/speaker_detect_server
       - COMMIT_HASH=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | cut -c 1-7)
