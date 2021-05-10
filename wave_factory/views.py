@@ -25,17 +25,18 @@ class WaveFactoryView(APIView):
     # request must has a parameter 'uuid'
     # eg: http://12.345.678.910/wave_factory/?uuid=8cb8f409-ecd5-4eb6-b5c7-cef4900c72cc
     def get(self, request, *args, **kwargs):
-        uuid = request.GET.get('uuid')
-        if uuid is None:
-            return Response(status=status.HTTP_400_BAD_REQUEST)
+#         uuid = request.GET.get('uuid')
+#         if uuid is None:
+#             return Response(status=status.HTTP_400_BAD_REQUEST)
 
-        file = self.get_object(uuid)
-        result_serializer = ResultSerializer(data={'uuid': file.uuid, 'result': file.result})
+#         file = self.get_object(uuid)
+#         result_serializer = ResultSerializer(data={'uuid': file.uuid, 'result': file.result})
 
-        if result_serializer.is_valid():
-            return Response(result_serializer.data, status=status.HTTP_200_OK)
-        else:
-            return Response(result_serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+#         if result_serializer.is_valid():
+#             return Response(result_serializer.data, status=status.HTTP_200_OK)
+#         else:
+#             return Response(result_serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+        return Response("How are you!!!!!!!", status=status.HTTP_200_OK)
 
     # Http Post Method
     # request body must has two keys: uuid, file
