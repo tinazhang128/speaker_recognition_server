@@ -1,0 +1,16 @@
+version: "3.7"
+
+services:
+  app:
+    build:
+      context: .
+    environment:
+      - DEBUG=1
+
+  proxy:
+    build:
+      context: ./proxy
+    ports:
+      - "8000:8000"
+    depends_on:
+      - app
